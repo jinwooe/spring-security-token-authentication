@@ -74,7 +74,7 @@ public class SpringSecurityTokenAuthDemoApplication extends WebSecurityConfigure
 ```
 
 # Test
-[httpie](https://httpie.org) to be used for testing  
+[HTTPie](https://httpie.org) to be used for testing  
 "/user" restricted to users who have 'ROLE_USER' as a role  
 "/admin" restrided to users who have 'ROLE_ADMIN' as a role  
 
@@ -107,7 +107,7 @@ x-auth-token: 5a86c104-5925-4790-a13f-42675223f075
 }
 ```
 ```
-jadeim$ http post localhost:8080/admin "x-auth-token:5a86c104-5925-4790-a13f-42675223f075"
+jadeim$ http localhost:8080/admin "x-auth-token:5a86c104-5925-4790-a13f-42675223f075"
 HTTP/1.1 200 
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Content-Type: application/json;charset=UTF-8
@@ -125,7 +125,7 @@ X-XSS-Protection: 1; mode=block
 }
 ```
 ```
-jadeim$ http post localhost:8080/user "x-auth-token:5a86c104-5925-4790-a13f-42675223f075"
+jadeim$ http localhost:8080/user "x-auth-token:5a86c104-5925-4790-a13f-42675223f075"
 HTTP/1.1 200 
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Content-Type: application/json;charset=UTF-8
